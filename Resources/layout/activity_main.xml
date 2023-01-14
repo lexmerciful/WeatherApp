@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/weather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_weight="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <EditText
+            android:id="@+id/citynametext"
+            android:textColorHint="@android:color/white"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:hint="Enter City Name"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkweatherbutton"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/citynametext"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:text="Check Weather"
+            android:layout_centerHorizontal="true"
+            android:background="?android:attr/colorAccent"
+            android:layout_width="200dp"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="0.8"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp">
+
+        <ImageView
+            android:id="@+id/weatherimage"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sunshine"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/temperaturetextview"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/weatherimage"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:text="27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/weatherdescriptiontext"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_below="@+id/weatherimage"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_centerVertical="true"
+            android:text="Few Clouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/placetext"
+            android:gravity="center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/weatherdescriptiontext"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_centerVertical="true"
+            android:text="London, GB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
